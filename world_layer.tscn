@@ -1,0 +1,44 @@
+[gd_scene load_steps=8 format=4 uid="uid://cwow0ggvyrt0v"]
+
+[ext_resource type="Script" uid="uid://c7j3cxf0whodt" path="res://world_layer.gd" id="1_se8i6"]
+[ext_resource type="Texture2D" uid="uid://b6xbmcdlvtmc6" path="res://sprites/world_layer.png" id="1_tbd5q"]
+[ext_resource type="Texture2D" uid="uid://ds4sgkboyxl0w" path="res://sprites/grass.png" id="2_gk7ml"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iik26"]
+texture = ExtResource("1_tbd5q")
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_gk7ml"]
+sources/0 = SubResource("TileSetAtlasSource_iik26")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tbd5q"]
+texture = ExtResource("2_gk7ml")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_iik26"]
+sources/0 = SubResource("TileSetAtlasSource_tbd5q")
+
+[node name="WorldLayer" type="TileMapLayer"]
+tile_map_data = PackedByteArray("AAD+////AAAAAAAAAAD/////AAAAAAAAAAD///7/AAAAAAAAAAAAAP7/AAAAAAAAAAABAP7/AAAAAAAAAAABAP3/AAAAAAAAAAACAP3/AAAAAAAAAAACAP7/AAAAAAAAAAABAP//AAAAAAAAAAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_gk7ml")
+script = ExtResource("1_se8i6")
+
+[node name="VisualLayer" type="TileMapLayer" parent="."]
+position = Vector2(-8, -8)
+tile_set = SubResource("TileSet_iik26")
+
+[node name="Camera2D" type="Camera2D" parent="."]
