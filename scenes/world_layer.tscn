@@ -9,6 +9,7 @@ texture = ExtResource("1_3h7tx")
 0:0/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_gk7ml"]
+terrain_set_0/mode = 0
 sources/0 = SubResource("TileSetAtlasSource_iik26")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tbd5q"]
